@@ -1,0 +1,68 @@
+.banner-wrapper {
+  .banner__content {
+    text-align: center;
+    margin: {
+      top: em(47.5px);
+      bottom: em(65px);
+    }
+
+    .banner__title {
+      margin: 0 auto 30px;
+      max-width: 1200px;
+    }
+
+    .banner__description {
+      max-width: em(500px);
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+  }
+
+
+  .banner__search {
+    width: fit-content;
+    margin: auto;
+
+    .search__form {
+      display: grid;
+      position: relative;
+      grid-template-columns: 5fr 1fr;
+      column-gap: em(20px);
+      margin: 0 0 em(10px);
+
+
+      .search__icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        @include min(sm) {
+          display: none;
+        }
+      }
+    }
+
+    @include max(sm) {
+      width: auto;
+
+      .search__form {
+        grid-template-columns: 1fr;
+        margin: em(10px);
+      }
+    }
+
+    .search__disclaimer {
+      font-size: em(12px);
+      letter-spacing: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+

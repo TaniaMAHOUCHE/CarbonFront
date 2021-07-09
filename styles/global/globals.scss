@@ -1,0 +1,114 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $black-4;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background: $black-4;
+    opacity: .4;
+    width: 0;
+    height: 1px;
+    transition: width .6s ease-in-out;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+button {
+  @include button;
+}
+
+a.link {
+  @include button;
+}
+
+input {
+  @include input;
+}
+
+label {
+  display: none;
+}
+
+ul {
+  @include d-flex($wrap: nowrap);
+}
+
+
+h1, .headline-h1 {
+  @each $bp, $h-size in $headline-h1 {
+    @include min($bp) {
+      @include font($h-size, 800, $black-10, -2px)
+    }
+  }
+}
+
+h2, .headline-h2 {
+  @each $bp, $h-size in $headline-h2 {
+    @include min($bp) {
+      @include font($h-size, 800, $black-10, -1px)
+    }
+  }
+}
+
+h3, .headline-h3 {
+  @each $bp, $h-size in $headline-h3 {
+    @include min($bp) {
+      @include font($h-size, bold, $black-10, .5px)
+    }
+  }
+}
+
+h4, .headline-h4 {
+  @each $bp, $h-size in $headline-h4 {
+    @include min($bp) {
+      @include font($h-size, bold, $black-10, .5px)
+    }
+  }
+}
+
+h5, .headline-h5 {
+  @each $bp, $h-size in $headline-h5 {
+    @include min($bp) {
+      @include font($h-size, bold, $black-10, 0px)
+    }
+  }
+}
+
+.text-big {
+  @each $bp, $h-size in $text-big {
+    @include min($bp) {
+      @include font($h-size, 300, $black-4, 0px)
+    }
+  }
+}
+
+.text-regular {
+  @each $bp, $h-size in $text-regular {
+    @include min($bp) {
+      @include font($h-size, 300, $black-4, .25px)
+    }
+  }
+}
+
+.text-small {
+  @each $bp, $h-size in $text-small {
+    @include min($bp) {
+      @include font($h-size, 200, $black-4, .5px)
+    }
+  }
+}
+
+
+
+
