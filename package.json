@@ -14,8 +14,7 @@
     "defaults"
   ],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younessidbakkasse/ecommerce-project.git"
+    "type": "git"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
